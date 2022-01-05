@@ -8,40 +8,58 @@
     <title>Car Project</title>
 </head>
 <body>
-    <form action="">
-        <label for="brand">Car brand:</label>
-        <input class="brand" type="text"/>
+    <div class="container">
+        <form class="form" action="">
+            <label for="brand">Car brand:</label>
+            <input class="brand" type="text"/>
+    
+            <label for="price">Price:</label>
+            <input class="price" type="number"/>
+            <input class="price" type="number"/>
+    
+            <label for="year">Year:</label>
+            <input class="year" type="number"/>
+            <input class="year" type="number"/>
+    
+            <label for="volume">Volume:</label>
+            <input class="volume" type="number"/>
+            <input class="volume" type="number"/>
+    
+            <label for="engine">Engine:</label>
+            <select name="" id="engine">
+                <option value=""></option>
+                <option value="">Diesel</option>
+                <option value="">Gazoline</option>
+                <option value="">Hybrid</option>
+                <option value="">Electric</option>
+            </select>
+    
+            <label for="gearbox">Gear Box:</label>
+            <input class="gearbox" type="text"/>
+            
+            <label for="body">Body:</label>
+            <select name="" id="engine">
+                <option value=""></option>
+                <option value="">Hatchback</option>
+                <option value="">Jeep</option>
+                <option value="">Universal</option>
+                <option value="">Crossover</option>
+                <option value="">Roadster</option>
+                <option value="">SUV</option>
+                <option value="">Coupe</option>
+                <option value="">Cabriolet</option>
+                <option value="">Sedan</option>
+                <option value="">Convertable</option>
+                <option value="">Sport Sedan</option>
+            </select>
 
-        <label for="price">Price:</label>
-        <input class="price" type="number"/>
-        <input class="price" type="number"/>
+            <label for="color">Color:</label>
+            <input class="color" type="text"/>
 
-        <label for="year">Year:</label>
-        <input class="year" type="number"/>
-        <input class="year" type="number"/>
+            <button class="btn-search">Search</button>
+        </form>
+    </div>
 
-        <label for="volume">Volume:</label>
-        <input class="volume" type="number"/>
-        <input class="volume" type="number"/>
-
-        <label for="engine">Engine:</label>
-        <select name="" id="engine">
-            <option value=""></option>
-            <option value="">Diesel</option>
-            <option value="">Gazoline</option>
-            <option value="">Hybrid</option>
-            <option value="">Electric</option>
-        </select>
-
-        <label for="gearbox">Gear Box:</label>
-        <input class="gearbox" type="text"/>
-
-        <label for="body">Body:</label>
-        <input class="body" type="text"/>
-
-        <label for="color">Color:</label>
-        <input class="color" type="text"/>
-    </form>
 
     <script type="module" src="./main.js"></script>
 </body>
