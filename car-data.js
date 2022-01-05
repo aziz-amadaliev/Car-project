@@ -814,7 +814,7 @@ export const getCarData = function () {
              numCarConsumPer100KmLitre: 9.2,
              strCarEngine: "gasoline",
              strCarGearbox: "Automatic",
-             strCarBody: "Sport Sedan",
+             strCarBody: "Sedan",
              strCarColor: "white",
              strCarDescription: "The Taycan is the pure expression of a Porsche electric sports car. Striking proportions, timeless and instantly recognizable design, and a perfect blend of performance with everyday usability.",
              strCarImage: "https://pics.porsche.com/rtt/iris?COSY-EU-100-1713c6eK12UC31P3T5JOCU%25hjdmiTDDmvMXlHWguCuq6Q44RtRHo9ZAaDjJu5PcI7tGW3rNbZJNKXv9Z7KcQQ%25yFN5tFAsXrw4r3wo0qnqZr8MCnR4i84tV2YN2OmNyW1QGWgCWKMUuyO9I7KM8lAhQ58ysgfNkcV0DyCcST89qefIjtUbDrx5158uJWRaVWCAxFHhDY2O%25P3Tm2iAyJmnxteC",
