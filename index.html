@@ -9,21 +9,29 @@
 </head>
 <body>
     <div class="container">
-        <form class="form" action="">
+        <head>
+            <h2 class="title">Find your dream car</h1>
+        </head>
+        <div class="car-search">
             <label for="brand">Car brand:</label>
             <input class="brand" type="text"/>
-    
+            <button class="btn-search">Search</button>
+        </div>
+        <form class="form" action="">
             <label for="price">Price:</label>
-            <input class="price" type="number"/>
-            <input class="price" type="number"/>
+            <input class="price" type="number" placeholder="from, $" />
+            <label for="separator">-</label>
+            <input class="price" type="number" placeholder="to, $" min="0"/>
     
             <label for="year">Year:</label>
-            <input class="year" type="number"/>
-            <input class="year" type="number"/>
+            <input class="year" type="number" placeholder="from" min="1900" minlength="4" maxlength="4"/>
+            <label for="">-</label>
+            <input class="year" type="number" placeholder="to" min="1900" minlength="4" maxlength="4"/>
     
             <label for="volume">Volume:</label>
-            <input class="volume" type="number"/>
-            <input class="volume" type="number"/>
+            <input class="volume" type="number" placeholder="from"/>
+            <label for="">-</label>
+            <input class="volume" type="number" placeholder="to"/>
     
             <label for="engine">Engine:</label>
             <select name="" id="engine">
@@ -35,10 +43,14 @@
             </select>
     
             <label for="gearbox">Gear Box:</label>
-            <input class="gearbox" type="text"/>
+            <select name="" id="gearbox">
+                <option value=""></option>
+                <option value="">Manual</option>
+                <option value="">Automatic</option>
+            </select>
             
             <label for="body">Body:</label>
-            <select name="" id="engine">
+            <select name="" id="body">
                 <option value=""></option>
                 <option value="">Hatchback</option>
                 <option value="">Jeep</option>
@@ -53,10 +65,25 @@
             </select>
 
             <label for="color">Color:</label>
-            <input class="color" type="text"/>
-
-            <button class="btn-search">Search</button>
+            <select name="" id="color">
+                <option value=""></option>
+                <option value="">White</option>
+                <option value="">Orange</option>
+                <option value="">Blue</option>
+                <option value="">Grey</option>
+                <option value="">Black</option>
+                <option value="">Silver</option>
+                <option value="">Golden</option>
+                <option value="">Red</option>
+                <option value="">Yellow</option>
+                <option value="">Cherry</option>
+            </select>
         </form>
+        
+        <div class="main-section">
+            <div class="car-section grid"></div>
+        </div>
+        
     </div>
 
 

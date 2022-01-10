@@ -1,13 +1,84 @@
-p {
-    color:green;
-    font-size: 20px;
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+
+body{
+    margin: 0;
+    padding: 0;
+}
+
+.title{
+    color: rgb(24, 178, 230);
     font-weight: bold;
+    font-size: 2rem;
+    text-align: center;
+}
+
+.car-search{
+    text-align: center;
+}
+
+.container{
+    padding: 1.2rem;
+    background-color: lightgray;
+    box-sizing: border-box;
+    background-position: center;
+    background-repeat: no-repeat;
+    font-family: 'Poppins', sans-serif;
+}
+
+input[type=text], input[type=number], select{
+    margin: 10px;
+    border: none;
+    border-radius: 2px;
+    padding: 5px;
+}
+
+input.volume, input.year{
+    width: 50px;
+}
+
+input.price{
+    width: 70px;
+}
+
+input.brand{
+    width: 200px;
+    height: 1rem;
+}
+
+select {
+    width: 100px;
+}
+
+.grid{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-content: space-evenly;
+}
+
+p {
+    color: rgb(24, 178, 230);
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+img{
+    border: 5px solid whitesmoke;
+    border-radius: 7px;
 }
 
 img:hover{
     cursor: pointer;
+    border: 7px solid grey;
 }
 
-.container{
-    display: inline-block;
+.btn-search{
+    border: none;
+    border-radius: 2px;
+    padding: 3px 10px;
+    font-family: 'Poppins', sans-serif;
+}
+
+.car-model{
+    color: red;
+    z-index: 100;
 }
