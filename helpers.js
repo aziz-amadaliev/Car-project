@@ -1,40 +1,26 @@
-import { getData } from "./get-data.js";
+//gearbox
 
-export const filterCars = (strCarGearbox) => {
-  const data = getCarGearbox();
+const selectGearbox = document.querySelector("#gearbox");
 
-  
+selectGearbox.addEventListener('change', showFilteredCarGearbox)
 
-  const filteredData = data.filter((carObject) => {
-    const strCarGearbox = carObject.carGearbox.toLowerCase();
-    return carGearbox.includes(searchedCarGearbox.toLowerCase());
-  });
+function showFilteredCarGearbox (event){
+    const gearboxChoice = selectGearbox.value;
+    
+    const filteredCarGearbox = data.filter((carObj) => {
+        
+        const carGearbox = carObj.strCarGearbox.toLowerCase();
+        const carImage = carObj.strCarImage;
+        
+        if(carGearbox === gearboxChoice){
+            const newDiv = document.createElement("div");
+            newDiv.innerHTML = carObj.strCarGearbox;
+            document.body.appendChild(newDiv)
 
-  return filteredData;
-};                                                                                                                                                  import { getData } from "./get-data.js";
-import { filterCars } from "./helper-functions.js";
-
-const data = getCarGearbox();
-
-const container = document.querySelector(".table");
-
-
-for (let i = 0; i < data.length; i = i + 1) {
-  const paragraph = document.createElement("p");
-  const image = document.createElement("img");
-  paragraph.innerText = data[i].strCar;
-  image.src = data[i].strCarThumb;
-  container.appendChild(paragraph);
-  container.appendChild(image);
+            const img = document.createElement("img");
+            img.src = carObj.strCarImage;
+            document.body.appendChild(img);
+            img.style.width = "250px";  
+        }
+    });   
 }
-
-const input = document.querySelector(".search-box");
-const button = document.querySelector("button");
-
-const handleClick = () => {
-  const searchedCarGearbox = input.value;
-  const filteredData = filterCars(searchedCarGearbox);
-  console.log(filteredData);
-};
-
-button.addEventListener("click", handleClick);
