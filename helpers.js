@@ -1,13 +1,13 @@
 import { getCarData } from "./car-data.js";
-export { pushToHTML };
-export { pushToHtmlBrand };
-export { pushToHtmlYear };
+
 const brand = document.querySelector(".brand");
 const container = document.querySelector(".container");
 const priceB = document.querySelector(".priceB");
 const priceA = document.querySelector(".priceA");
 const yearB = document.querySelector(".yearB");
 const yearA = document.querySelector(".yearA");
+
+
 export const filteredCar = (searchedCarBrand) => {
     const data = getCarData();
     const filteredData = data.filter((carObj) => {
@@ -68,7 +68,7 @@ function pushToHtmlYear () {
     const filteredCarByBrand = filteredCar(searchedCarValue);
 
     for (let i=0; i < filteredCarByBrand.length; i++) {
-        if(yearB.value <= filteredCarByBrand[i].numCarPriceUSD && yearA.value >= filteredCarByBrand[i].numCarPriceUSD){
+        if(yearB.value <= filteredCarByBrand[i].strCarYear && yearA.value >= filteredCarByBrand[i].strCarYear && priceB.value <= filteredCarByBrand[i].numCarPriceUSD && priceA.value >= filteredCarByBrand[i].numCarPriceUSD){
             let paragraph = document.createElement("p");
             paragraph.innerText = filteredCarByBrand[i].strCarBrand;
             container.appendChild(paragraph);
@@ -84,3 +84,8 @@ function pushToHtmlYear () {
             image.style.width = "300px"
 } } }
 
+
+
+export { pushToHTML };
+export { pushToHtmlBrand };
+export { pushToHtmlYear };

@@ -14,7 +14,7 @@ const processClick = (event) => {
 
         if (priceB.value != "" && priceA.value != "") {
             return pushToHTML ();
-        }else if (yearB.value != "" && yearA.value != "") {
+        }else if (yearB.value != "" && yearA.value != "" || priceB.value != "" && priceA.value != "") {
             return pushToHtmlYear ();
         } else {
             return pushToHtmlBrand ();
