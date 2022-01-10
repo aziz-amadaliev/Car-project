@@ -15,7 +15,7 @@
     
             <label for="price">Price:</label>
             <input class="price" type="number"/>
-            <input class="price" type="number"/>
+            <input class="price1" type="number"/>
     
             <label for="year">Year:</label>
             <input class="year" type="number"/>
@@ -26,34 +26,54 @@
             <input class="volume" type="number"/>
     
             <label for="engine">Engine:</label>
-            <select name="" id="engine">
+            <select id="engine">
                 <option value=""></option>
-                <option value="">Diesel</option>
-                <option value="">Gazoline</option>
-                <option value="">Hybrid</option>
-                <option value="">Electric</option>
+                <option value="diesel">Diesel</option>
+                <option value="gasoline">Gasoline</option>
+                <option value="hybrid">Hybrid</option>
+                <option value="electric">Electric</option>
             </select>
     
             <label for="gearbox">Gear Box:</label>
             <input class="gearbox" type="text"/>
             
-            <label for="body">Body:</label>
-            <select name="" id="engine">
+            <!-- VENERA`s PART -->
+            <label for="selectBody">Body:</label>
+            <select id="selectBody">
                 <option value=""></option>
-                <option value="">Hatchback</option>
-                <option value="">Jeep</option>
-                <option value="">Universal</option>
-                <option value="">Crossover</option>
-                <option value="">Roadster</option>
-                <option value="">SUV</option>
-                <option value="">Coupe</option>
-                <option value="">Cabriolet</option>
-                <option value="">Sedan</option>
-                <option value="">Convertable</option>
+                <option value="hatchback">Hatchback</option>
+                <option value="jeep">Jeep</option>
+                <option value="universal">Universal</option>
+                <option value="crossover">Crossover</option>
+                <option value="roadster">Roadster</option>
+                <option value="suv">SUV</option>
+                <option value="coupe">Coupe</option>
+                <option value="cabriolet">Cabriolet</option>
+                <option value="sedan">Sedan</option>
+                <option value="convertable">Convertable</option>
             </select>
 
             <label for="color">Color:</label>
-            <input class="color" type="text"/>
+            <select name="" id="color">
+                <option value=""></option>
+                <option value="white">White</option>
+                <option value="orange">Orange</option>
+                <option value="blue">Blue</option>
+                <option value="grey">Grey</option>
+                <option value="black">Black</option>
+                <option value="silver metallic">Silver metallic</option>
+                <option value="blue metallic">Blue metallic</option>
+                <option value="white metallic">White metallic</option>
+                <option value="black metallic">Black metallic</option>
+                <option value="dark red">Dark red</option>
+                <option value="silver">Silver</option>
+                <option value="red">Red</option>
+                <option value="black onyx">Black onyx</option>
+                <option value="golden">Golden</option>
+                <option value="cherry">Cherry</option>
+                <option value="yellow">Yellow</option>
+                <option value="miami blue">Miami blue</option>
+            </select>
 
             <button class="btn-search">Search</button>
         </form>
