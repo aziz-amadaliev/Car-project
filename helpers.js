@@ -68,7 +68,7 @@ function pushToHtmlYear () {
     const filteredCarByBrand = filteredCar(searchedCarValue);
 
     for (let i=0; i < filteredCarByBrand.length; i++) {
-        if(yearB.value <= filteredCarByBrand[i].strCarYear && yearA.value >= filteredCarByBrand[i].strCarYear && priceB.value <= filteredCarByBrand[i].numCarPriceUSD && priceA.value >= filteredCarByBrand[i].numCarPriceUSD){
+        if((yearB.value <= filteredCarByBrand[i].strCarYear && yearA.value >= filteredCarByBrand[i].strCarYear) || (priceB.value <= filteredCarByBrand[i].numCarPriceUSD && priceA.value >= filteredCarByBrand[i].numCarPriceUSD)){
             let paragraph = document.createElement("p");
             paragraph.innerText = filteredCarByBrand[i].strCarBrand;
             container.appendChild(paragraph);
