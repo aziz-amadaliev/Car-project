@@ -32,11 +32,11 @@ input[type=text], input[type=number], select{
     padding: 5px;
 }
 
-input.volume, input.year{
+input.volumeA, input.volumeB, input.yearA, input.yearB {
     width: 50px;
 }
 
-input.price{
+input.priceA, input.priceB{
     width: 70px;
 }
 
