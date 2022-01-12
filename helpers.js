@@ -130,8 +130,53 @@ function pushToHTML1 () {
 } } }
 
 
+function pushToHtmlB () {
+    const searchedCarValue = brand.value.toLowerCase();
+    const filteredCarByBrand = filteredCar(searchedCarValue);
+
+    for (let i=0; i < filteredCarByBrand.length; i++) {
+        if(priceB.value <= filteredCarByBrand[i].numCarPriceUSD){
+            let paragraph = document.createElement("p");
+            paragraph.innerText = filteredCarByBrand[i].strCarBrand;
+            container.appendChild(paragraph);
+            let model = document.createElement("p");
+            model.innerText = filteredCarByBrand[i].numCarPriceUSD;
+            container.appendChild(model);
+            let year = document.createElement("p");
+            year.innerText = filteredCarByBrand[i].strCarYear;
+            container.appendChild(year);
+            let image = document.createElement("img");
+            image.src = filteredCarByBrand[i].strCarImage;
+            container.appendChild(image);
+            image.style.width = "300px"
+} } }
+
+function pushToHtmlA () {
+    const searchedCarValue = brand.value.toLowerCase();
+    const filteredCarByBrand = filteredCar(searchedCarValue);
+
+    for (let i=0; i < filteredCarByBrand.length; i++) {
+        if(priceA.value >= filteredCarByBrand[i].numCarPriceUSD){
+            let paragraph = document.createElement("p");
+            paragraph.innerText = filteredCarByBrand[i].strCarBrand;
+            container.appendChild(paragraph);
+            let model = document.createElement("p");
+            model.innerText = filteredCarByBrand[i].numCarPriceUSD;
+            container.appendChild(model);
+            let year = document.createElement("p");
+            year.innerText = filteredCarByBrand[i].strCarYear;
+            container.appendChild(year);
+            let image = document.createElement("img");
+            image.src = filteredCarByBrand[i].strCarImage;
+            container.appendChild(image);
+            image.style.width = "300px"
+} } }
+
+
 export { pushToHTML1 }
 export { pushToHTML };
+export { pushToHtmlB }
+export { pushToHtmlA }
 export { pushToHtmlBrand };
 export { pushToHtmlYear };
 export { pushToHtmlYear1 };

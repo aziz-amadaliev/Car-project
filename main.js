@@ -3,6 +3,8 @@ import { pushToHtmlBrand } from "./helpers.js";
 import { pushToHtmlYear } from "./helpers.js";
 import { pushToHtmlYear1 } from "./helpers.js";
 import { pushToHTML1 } from "./helpers.js";
+import { pushToHtmlB } from "./helpers.js";
+import { pushToHtmlA } from "./helpers.js";
 const brand = document.querySelector(".brand");
 const button = document.querySelector(".btn-search");
 const priceB = document.querySelector(".priceB");
@@ -15,7 +17,11 @@ const processClick = (event) => {
 
         if (brand.value != "" && priceB.value == "" && priceA.value == "" && yearB.value == "" && yearA.value == ""){
             return pushToHtmlBrand();
-        }else if (brand.value != "" && priceB.value !== "" && priceA.value !== "" && yearB.value == "" && yearA.value == "") {
+        } else if (brand.value == "" && priceB.value !== "" && priceA.value == "" && yearB.value == "" && yearA.value == "") {
+            return pushToHtmlB();
+        } else if (brand.value == "" && priceB.value == "" && priceA.value !== "" && yearB.value == "" && yearA.value == "") {
+            return pushToHtmlA();
+        } else if (brand.value != "" && priceB.value !== "" && priceA.value !== "" && yearB.value == "" && yearA.value == "") {
             return pushToHTML();
         } else if (brand.value == "" && priceB.value !== "" && priceA.value !== "" && yearB.value !== "" && yearA.value !== ""){
             return pushToHtmlYear();
