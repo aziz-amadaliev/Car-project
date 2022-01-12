@@ -5,6 +5,8 @@ const priceB = document.querySelector(".priceB");
 const priceA = document.querySelector(".priceA");
 const yearB = document.querySelector(".yearB");
 const yearA = document.querySelector(".yearA");
+const volumeB = document.querySelector(".volumeB")
+const volumeA = document.querySelector(".volumeA")
 
 
 export const filteredCar = (searchedCarType) => {
@@ -21,7 +23,7 @@ export const filteredCar = (searchedCarType) => {
     return filteredData;
 }
 
-function pushToHTML () {
+function pushToHtmlPrice () {
     const searchedCarValue = brand.value.toLowerCase();
     const filteredCarByBrand = filteredCar(searchedCarValue);
 
@@ -227,11 +229,131 @@ function pushToHtmlA () {
             mainSection.appendChild(div);
 } } }
 
+function pushToHtmlOnlyVolume () {
+    const searchedCarValue = brand.value.toLowerCase();
+    const filteredCarByBrand = filteredCar(searchedCarValue);
+
+    for (let i=0; i < filteredCarByBrand.length; i++) {
+        if((volumeB.value <= filteredCarByBrand[i].numCarVolum && volumeA.value >= filteredCarByBrand[i].numCarVolum)){
+            const div = document.createElement("div")
+            div.classList.add("myDiv")
+    
+            const paragraph = document.createElement("p");
+            //console.log(paragraph.classList)
+            paragraph.innerText = filteredCarByBrand[i].strCarBrand;
+            paragraph.classList.add("car-text")
+            div.appendChild(paragraph);
+    
+            const image = document.createElement("img");
+            const aTag = document.createElement("a")
+            aTag.href = "./car.html";
+            aTag.target = "_blank";
+    
+            image.src = filteredCarByBrand[i].strCarImage;
+            image.classList.add("car-image")
+            image.style.width = "500px";
+            aTag.appendChild(image);
+            div.appendChild(aTag)
+    
+            mainSection.appendChild(div);
+} } }
+
+function pushToHtmlVolumePrice () {
+    const searchedCarValue = brand.value.toLowerCase();
+    const filteredCarByBrand = filteredCar(searchedCarValue);
+
+    for (let i=0; i < filteredCarByBrand.length; i++) {
+        if((priceB.value <= filteredCarByBrand[i].numCarPriceUSD && priceA.value >= filteredCarByBrand[i].numCarPriceUSD) &&(volumeB.value <= filteredCarByBrand[i].numCarVolum && volumeA.value >= filteredCarByBrand[i].numCarVolum)){
+            const div = document.createElement("div")
+            div.classList.add("myDiv")
+    
+            const paragraph = document.createElement("p");
+            //console.log(paragraph.classList)
+            paragraph.innerText = filteredCarByBrand[i].strCarBrand;
+            paragraph.classList.add("car-text")
+            div.appendChild(paragraph);
+    
+            const image = document.createElement("img");
+            const aTag = document.createElement("a")
+            aTag.href = "./car.html";
+            aTag.target = "_blank";
+    
+            image.src = filteredCarByBrand[i].strCarImage;
+            image.classList.add("car-image")
+            image.style.width = "500px";
+            aTag.appendChild(image);
+            div.appendChild(aTag)
+    
+            mainSection.appendChild(div);
+} } }
+
+function pushToHtmlVolumeYear () {
+    const searchedCarValue = brand.value.toLowerCase();
+    const filteredCarByBrand = filteredCar(searchedCarValue);
+
+    for (let i=0; i < filteredCarByBrand.length; i++) {
+        if((yearB.value <= filteredCarByBrand[i].strCarYear && yearA.value >= filteredCarByBrand[i].strCarYear) && (volumeB.value <= filteredCarByBrand[i].numCarVolum && volumeA.value >= filteredCarByBrand[i].numCarVolum)){
+            const div = document.createElement("div")
+            div.classList.add("myDiv")
+    
+            const paragraph = document.createElement("p");
+            //console.log(paragraph.classList)
+            paragraph.innerText = filteredCarByBrand[i].strCarBrand;
+            paragraph.classList.add("car-text")
+            div.appendChild(paragraph);
+    
+            const image = document.createElement("img");
+            const aTag = document.createElement("a")
+            aTag.href = "./car.html";
+            aTag.target = "_blank";
+    
+            image.src = filteredCarByBrand[i].strCarImage;
+            image.classList.add("car-image")
+            image.style.width = "500px";
+            aTag.appendChild(image);
+            div.appendChild(aTag)
+    
+            mainSection.appendChild(div);
+} } }
+
+function pushToHtmlVolume () {
+    const searchedCarValue = brand.value.toLowerCase();
+    const filteredCarByBrand = filteredCar(searchedCarValue);
+
+    for (let i=0; i < filteredCarByBrand.length; i++) {
+        if((priceB.value <= filteredCarByBrand[i].numCarPriceUSD && priceA.value >= filteredCarByBrand[i].numCarPriceUSD) && (yearB.value <= filteredCarByBrand[i].strCarYear && yearA.value >= filteredCarByBrand[i].strCarYear) && (volumeB.value <= filteredCarByBrand[i].numCarVolum && volumeA.value >= filteredCarByBrand[i].numCarVolum)){
+            const div = document.createElement("div")
+            div.classList.add("myDiv")
+    
+            const paragraph = document.createElement("p");
+            //console.log(paragraph.classList)
+            paragraph.innerText = filteredCarByBrand[i].strCarBrand;
+            paragraph.classList.add("car-text")
+            div.appendChild(paragraph);
+    
+            const image = document.createElement("img");
+            const aTag = document.createElement("a")
+            aTag.href = "./car.html";
+            aTag.target = "_blank";
+    
+            image.src = filteredCarByBrand[i].strCarImage;
+            image.classList.add("car-image")
+            image.style.width = "500px";
+            aTag.appendChild(image);
+            div.appendChild(aTag)
+    
+            mainSection.appendChild(div);
+} } }
+
 
 export { pushToHTML1 }
-export { pushToHTML };
+export { pushToHtmlPrice };
 export { pushToHtmlB }
 export { pushToHtmlA }
 export { pushToHtmlBrand };
 export { pushToHtmlYear };
 export { pushToHtmlYear1 };
+export { pushToHtmlOnlyVolume }
+export { pushToHtmlVolumePrice }
+export { pushToHtmlVolumeYear }
+export { pushToHtmlVolume }
