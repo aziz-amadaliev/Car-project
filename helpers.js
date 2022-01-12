@@ -30,9 +30,9 @@ function showFilteredCarGearbox (event){
     }
     const gearboxChoice = gearbox.value;
     
-    const filteredCarGearbox = data.filter((carObj) => {
+        const filteredCarGearbox = data.filter((carObj) => {
         const carGearbox = carObj.strCarGearbox.toLowerCase();
-        const carImage = carObj.strCarImage;
+       // const carImage = carObj.strCarImage;
         
         if(carGearbox === gearboxChoice){
             const div = document.createElement("div")
