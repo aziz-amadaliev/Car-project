@@ -1,7 +1,7 @@
 import { getCarData } from "./car-data.js";
 
 const brand = document.querySelector(".brand");
-const container = document.querySelector(".container");
+const main_section = document.querySelector(".main-section");
 const priceB = document.querySelector(".priceB");
 const priceA = document.querySelector(".priceA");
 const yearB = document.querySelector(".yearB");
@@ -30,16 +30,16 @@ function pushToHTML () {
         if((priceB.value <= filteredCarByBrand[i].numCarPriceUSD && priceA.value >= filteredCarByBrand[i].numCarPriceUSD)){
             let paragraph = document.createElement("p");
             paragraph.innerText = filteredCarByBrand[i].strCarBrand;
-            container.appendChild(paragraph);
+            main_section.appendChild(paragraph);
             let model = document.createElement("p");
             model.innerText = filteredCarByBrand[i].numCarPriceUSD;
-            container.appendChild(model);
+            main_section.appendChild(model);
             let year = document.createElement("p");
             year.innerText = filteredCarByBrand[i].strCarYear;
-            container.appendChild(year);
+            main_section.appendChild(year);
             let image = document.createElement("img");
             image.src = filteredCarByBrand[i].strCarImage;
-            container.appendChild(image);
+            main_section.appendChild(image);
             image.style.width = "300px"
 } } }
 
@@ -52,16 +52,16 @@ function pushToHtmlYear () {
         if((yearB.value <= filteredCarByBrand[i].strCarYear && yearA.value >= filteredCarByBrand[i].strCarYear) && (priceB.value <= filteredCarByBrand[i].numCarPriceUSD && priceA.value >= filteredCarByBrand[i].numCarPriceUSD)){
             let paragraph = document.createElement("p");
             paragraph.innerText = filteredCarByBrand[i].strCarBrand;
-            container.appendChild(paragraph);
+            main_section.appendChild(paragraph);
             let model = document.createElement("p");
             model.innerText = filteredCarByBrand[i].numCarPriceUSD;
-            container.appendChild(model);
+            main_section.appendChild(model);
             let year = document.createElement("p");
             year.innerText = filteredCarByBrand[i].strCarYear;
-            container.appendChild(year);
+            main_section.appendChild(year);
             let image = document.createElement("img");
             image.src = filteredCarByBrand[i].strCarImage;
-            container.appendChild(image);
+            main_section.appendChild(image);
             image.style.width = "300px"
 } } }
 
@@ -74,16 +74,16 @@ function pushToHtmlYear1 () {
         if(yearB.value <= filteredCarByBrand[i].strCarYear && yearA.value >= filteredCarByBrand[i].strCarYear){
             let paragraph = document.createElement("p");
             paragraph.innerText = filteredCarByBrand[i].strCarBrand;
-            container.appendChild(paragraph);
+            main_section.appendChild(paragraph);
             let model = document.createElement("p");
             model.innerText = filteredCarByBrand[i].numCarPriceUSD;
-            container.appendChild(model);
+            main_section.appendChild(model);
             let year = document.createElement("p");
             year.innerText = filteredCarByBrand[i].strCarYear;
-            container.appendChild(year);
+            main_section.appendChild(year);
             let image = document.createElement("img");
             image.src = filteredCarByBrand[i].strCarImage;
-            container.appendChild(image);
+            main_section.appendChild(image);
             image.style.width = "300px"
 } } }
 
@@ -94,16 +94,16 @@ function pushToHtmlBrand () {
     for (let i=0; i < filteredCarByBrand.length; i++) {
         let paragraph = document.createElement("p");
         paragraph.innerText = filteredCarByBrand[i].strCarBrand;
-        container.appendChild(paragraph);
+        main_section.appendChild(paragraph);
         let model = document.createElement("o");
         model.innerText = filteredCarByBrand[i].numCarPriceUSD;
-        container.appendChild(model);
+        main_section.appendChild(model);
         let year = document.createElement("p");
         year.innerText = filteredCarByBrand[i].strCarYear;
-        container.appendChild(year);
+        main_section.appendChild(year);
         let image = document.createElement("img");
         image.src = filteredCarByBrand[i].strCarImage;
-        container.appendChild(image);
+        main_section.appendChild(image);
         image.style.width = "300px"
     }
 }
@@ -116,16 +116,16 @@ function pushToHTML1 () {
         if((priceB.value <= filteredCarByBrand[i].numCarPriceUSD && priceA.value >= filteredCarByBrand[i].numCarPriceUSD) && (yearB.value <= filteredCarByBrand[i].strCarYear && yearA.value >= filteredCarByBrand[i].strCarYear)){
             let paragraph = document.createElement("p");
             paragraph.innerText = filteredCarByBrand[i].strCarBrand;
-            container.appendChild(paragraph);
+            main_section.appendChild(paragraph);
             let model = document.createElement("p");
             model.innerText = filteredCarByBrand[i].numCarPriceUSD;
-            container.appendChild(model);
+            main_section.appendChild(model);
             let year = document.createElement("p");
             year.innerText = filteredCarByBrand[i].strCarYear;
-            container.appendChild(year);
+            main_section.appendChild(year);
             let image = document.createElement("img");
             image.src = filteredCarByBrand[i].strCarImage;
-            container.appendChild(image);
+            main_section.appendChild(image);
             image.style.width = "300px"
 } } }
 
@@ -138,16 +138,16 @@ function pushToHtmlB () {
         if(priceB.value <= filteredCarByBrand[i].numCarPriceUSD){
             let paragraph = document.createElement("p");
             paragraph.innerText = filteredCarByBrand[i].strCarBrand;
-            container.appendChild(paragraph);
+            main_section.appendChild(paragraph);
             let model = document.createElement("p");
             model.innerText = filteredCarByBrand[i].numCarPriceUSD;
-            container.appendChild(model);
+            main_section.appendChild(model);
             let year = document.createElement("p");
             year.innerText = filteredCarByBrand[i].strCarYear;
-            container.appendChild(year);
+            main_section.appendChild(year);
             let image = document.createElement("img");
             image.src = filteredCarByBrand[i].strCarImage;
-            container.appendChild(image);
+            main_section.appendChild(image);
             image.style.width = "300px"
 } } }
 
@@ -159,16 +159,16 @@ function pushToHtmlA () {
         if(priceA.value >= filteredCarByBrand[i].numCarPriceUSD){
             let paragraph = document.createElement("p");
             paragraph.innerText = filteredCarByBrand[i].strCarBrand;
-            container.appendChild(paragraph);
+            main_section.appendChild(paragraph);
             let model = document.createElement("p");
             model.innerText = filteredCarByBrand[i].numCarPriceUSD;
-            container.appendChild(model);
+            main_section.appendChild(model);
             let year = document.createElement("p");
             year.innerText = filteredCarByBrand[i].strCarYear;
-            container.appendChild(year);
+            main_section.appendChild(year);
             let image = document.createElement("img");
             image.src = filteredCarByBrand[i].strCarImage;
-            container.appendChild(image);
+            main_section.appendChild(image);
             image.style.width = "300px"
 } } }
 
