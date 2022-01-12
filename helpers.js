@@ -4,16 +4,20 @@ import { data } from "./main.js";
 
 const mainSection = document.querySelector(".main-section");
 
-export const filteredCar = (searchedCarBrand) => {
-
-   // const data = getCarData();
+export const filteredCar = (searchedCarType) => {
+    const data = getCarData();
     const filteredData = data.filter((carObj) => {
         //console.log(carObj.strCarBrand)
         const carName = carObj.strCarBrand.toLowerCase();
-        //console.log(carName, 'line16')
-        return carName.includes(searchedCarBrand);
+        const carPrice = carObj.numCarPriceUSD.toString()
+        const carYear = carObj.strCarYear;
+        return carName.includes(searchedCarType) ||  carYear.includes(searchedCarType) || carPrice.includes(searchedCarType)
         
     } )
+    //console.log(typeof filteredData, 'line19')
+    return filteredData;
+}
+
     //console.log(typeof filteredData, 'line19')
 //Gearbox
 const gearbox = document.querySelector("#gearbox");
@@ -54,4 +58,4 @@ function showFilteredCarGearbox (event){
             mainSection.appendChild(div); 
         }
     });   
-}}
+}
