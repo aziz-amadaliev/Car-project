@@ -27,19 +27,27 @@ function pushToHTML () {
 
     for (let i=0; i < filteredCarByBrand.length; i++) {
         if((priceB.value <= filteredCarByBrand[i].numCarPriceUSD && priceA.value >= filteredCarByBrand[i].numCarPriceUSD)){
-            let paragraph = document.createElement("p");
+            const div = document.createElement("div")
+            div.classList.add("myDiv")
+    
+            const paragraph = document.createElement("p");
+            //console.log(paragraph.classList)
             paragraph.innerText = filteredCarByBrand[i].strCarBrand;
-            mainSection.appendChild(paragraph);
-            let model = document.createElement("p");
-            model.innerText = filteredCarByBrand[i].numCarPriceUSD;
-            mainSection.appendChild(model);
-            let year = document.createElement("p");
-            year.innerText = filteredCarByBrand[i].strCarYear;
-            mainSection.appendChild(year);
-            let image = document.createElement("img");
+            paragraph.classList.add("car-text")
+            div.appendChild(paragraph);
+    
+            const image = document.createElement("img");
+            const aTag = document.createElement("a")
+            aTag.href = "./car.html";
+            aTag.target = "_blank";
+    
             image.src = filteredCarByBrand[i].strCarImage;
-            mainSection.appendChild(image);
-            image.style.width = "300px"
+            image.classList.add("car-image")
+            image.style.width = "500px";
+            aTag.appendChild(image);
+            div.appendChild(aTag)
+    
+            mainSection.appendChild(div);
 } } }
 
 
@@ -49,19 +57,27 @@ function pushToHtmlYear () {
 
     for (let i=0; i < filteredCarByBrand.length; i++) {
         if((yearB.value <= filteredCarByBrand[i].strCarYear && yearA.value >= filteredCarByBrand[i].strCarYear) && (priceB.value <= filteredCarByBrand[i].numCarPriceUSD && priceA.value >= filteredCarByBrand[i].numCarPriceUSD)){
-            let paragraph = document.createElement("p");
+            const div = document.createElement("div")
+            div.classList.add("myDiv")
+    
+            const paragraph = document.createElement("p");
+            //console.log(paragraph.classList)
             paragraph.innerText = filteredCarByBrand[i].strCarBrand;
-            mainSection.appendChild(paragraph);
-            let model = document.createElement("p");
-            model.innerText = filteredCarByBrand[i].numCarPriceUSD;
-            mainSection.appendChild(model);
-            let year = document.createElement("p");
-            year.innerText = filteredCarByBrand[i].strCarYear;
-            mainSection.appendChild(year);
-            let image = document.createElement("img");
+            paragraph.classList.add("car-text")
+            div.appendChild(paragraph);
+    
+            const image = document.createElement("img");
+            const aTag = document.createElement("a")
+            aTag.href = "./car.html";
+            aTag.target = "_blank";
+    
             image.src = filteredCarByBrand[i].strCarImage;
-            mainSection.appendChild(image);
-            image.style.width = "300px"
+            image.classList.add("car-image")
+            image.style.width = "500px";
+            aTag.appendChild(image);
+            div.appendChild(aTag)
+    
+            mainSection.appendChild(div);
 } } }
 
 
@@ -71,19 +87,27 @@ function pushToHtmlYear1 () {
 
     for (let i=0; i < filteredCarByBrand.length; i++) {
         if(yearB.value <= filteredCarByBrand[i].strCarYear && yearA.value >= filteredCarByBrand[i].strCarYear){
-            let paragraph = document.createElement("p");
+            const div = document.createElement("div")
+            div.classList.add("myDiv")
+    
+            const paragraph = document.createElement("p");
+            //console.log(paragraph.classList)
             paragraph.innerText = filteredCarByBrand[i].strCarBrand;
-            mainSection.appendChild(paragraph);
-            let model = document.createElement("p");
-            model.innerText = filteredCarByBrand[i].numCarPriceUSD;
-            mainSection.appendChild(model);
-            let year = document.createElement("p");
-            year.innerText = filteredCarByBrand[i].strCarYear;
-            mainSection.appendChild(year);
-            let image = document.createElement("img");
+            paragraph.classList.add("car-text")
+            div.appendChild(paragraph);
+    
+            const image = document.createElement("img");
+            const aTag = document.createElement("a")
+            aTag.href = "./car.html";
+            aTag.target = "_blank";
+    
             image.src = filteredCarByBrand[i].strCarImage;
-            mainSection.appendChild(image);
-            image.style.width = "300px"
+            image.classList.add("car-image")
+            image.style.width = "500px";
+            aTag.appendChild(image);
+            div.appendChild(aTag)
+    
+            mainSection.appendChild(div);
 } } }
 
 function pushToHtmlBrand () {
@@ -91,19 +115,27 @@ function pushToHtmlBrand () {
     const filteredCarByBrand = filteredCar(searchedCarValue);
 
     for (let i=0; i < filteredCarByBrand.length; i++) {
-        let paragraph = document.createElement("p");
+        const div = document.createElement("div")
+        div.classList.add("myDiv")
+
+        const paragraph = document.createElement("p");
+        //console.log(paragraph.classList)
         paragraph.innerText = filteredCarByBrand[i].strCarBrand;
-        mainSection.appendChild(paragraph);
-        let model = document.createElement("o");
-        model.innerText = filteredCarByBrand[i].numCarPriceUSD;
-        mainSection.appendChild(model);
-        let year = document.createElement("p");
-        year.innerText = filteredCarByBrand[i].strCarYear;
-        mainSection.appendChild(year);
-        let image = document.createElement("img");
+        paragraph.classList.add("car-text")
+        div.appendChild(paragraph);
+
+        const image = document.createElement("img");
+        const aTag = document.createElement("a")
+        aTag.href = "./car.html";
+        aTag.target = "_blank";
+
         image.src = filteredCarByBrand[i].strCarImage;
-        mainSection.appendChild(image);
-        image.style.width = "300px"
+        image.classList.add("car-image")
+        image.style.width = "500px";
+        aTag.appendChild(image);
+        div.appendChild(aTag)
+
+        mainSection.appendChild(div);
     }
 }
 
@@ -113,19 +145,27 @@ function pushToHTML1 () {
 
     for (let i=0; i < filteredCarByBrand.length; i++) {
         if((priceB.value <= filteredCarByBrand[i].numCarPriceUSD && priceA.value >= filteredCarByBrand[i].numCarPriceUSD) && (yearB.value <= filteredCarByBrand[i].strCarYear && yearA.value >= filteredCarByBrand[i].strCarYear)){
-            let paragraph = document.createElement("p");
+            const div = document.createElement("div")
+            div.classList.add("myDiv")
+    
+            const paragraph = document.createElement("p");
+            //console.log(paragraph.classList)
             paragraph.innerText = filteredCarByBrand[i].strCarBrand;
-            mainSection.appendChild(paragraph);
-            let model = document.createElement("p");
-            model.innerText = filteredCarByBrand[i].numCarPriceUSD;
-            mainSection.appendChild(model);
-            let year = document.createElement("p");
-            year.innerText = filteredCarByBrand[i].strCarYear;
-            mainSection.appendChild(year);
-            let image = document.createElement("img");
+            paragraph.classList.add("car-text")
+            div.appendChild(paragraph);
+    
+            const image = document.createElement("img");
+            const aTag = document.createElement("a")
+            aTag.href = "./car.html";
+            aTag.target = "_blank";
+    
             image.src = filteredCarByBrand[i].strCarImage;
-            mainSection.appendChild(image);
-            image.style.width = "300px"
+            image.classList.add("car-image")
+            image.style.width = "500px";
+            aTag.appendChild(image);
+            div.appendChild(aTag)
+    
+            mainSection.appendChild(div);
 } } }
 
 
@@ -135,19 +175,27 @@ function pushToHtmlB () {
 
     for (let i=0; i < filteredCarByBrand.length; i++) {
         if(priceB.value <= filteredCarByBrand[i].numCarPriceUSD){
-            let paragraph = document.createElement("p");
+            const div = document.createElement("div")
+            div.classList.add("myDiv")
+    
+            const paragraph = document.createElement("p");
+            //console.log(paragraph.classList)
             paragraph.innerText = filteredCarByBrand[i].strCarBrand;
-            mainSection.appendChild(paragraph);
-            let model = document.createElement("p");
-            model.innerText = filteredCarByBrand[i].numCarPriceUSD;
-            mainSection.appendChild(model);
-            let year = document.createElement("p");
-            year.innerText = filteredCarByBrand[i].strCarYear;
-            mainSection.appendChild(year);
-            let image = document.createElement("img");
+            paragraph.classList.add("car-text")
+            div.appendChild(paragraph);
+    
+            const image = document.createElement("img");
+            const aTag = document.createElement("a")
+            aTag.href = "./car.html";
+            aTag.target = "_blank";
+    
             image.src = filteredCarByBrand[i].strCarImage;
-            mainSection.appendChild(image);
-            image.style.width = "300px"
+            image.classList.add("car-image")
+            image.style.width = "500px";
+            aTag.appendChild(image);
+            div.appendChild(aTag)
+    
+            mainSection.appendChild(div);
 } } }
 
 function pushToHtmlA () {
@@ -156,19 +204,27 @@ function pushToHtmlA () {
 
     for (let i=0; i < filteredCarByBrand.length; i++) {
         if(priceA.value >= filteredCarByBrand[i].numCarPriceUSD){
-            let paragraph = document.createElement("p");
+            const div = document.createElement("div")
+            div.classList.add("myDiv")
+    
+            const paragraph = document.createElement("p");
+            //console.log(paragraph.classList)
             paragraph.innerText = filteredCarByBrand[i].strCarBrand;
-            mainSection.appendChild(paragraph);
-            let model = document.createElement("p");
-            model.innerText = filteredCarByBrand[i].numCarPriceUSD;
-            mainSection.appendChild(model);
-            let year = document.createElement("p");
-            year.innerText = filteredCarByBrand[i].strCarYear;
-            mainSection.appendChild(year);
-            let image = document.createElement("img");
+            paragraph.classList.add("car-text")
+            div.appendChild(paragraph);
+    
+            const image = document.createElement("img");
+            const aTag = document.createElement("a")
+            aTag.href = "./car.html";
+            aTag.target = "_blank";
+    
             image.src = filteredCarByBrand[i].strCarImage;
-            mainSection.appendChild(image);
-            image.style.width = "300px"
+            image.classList.add("car-image")
+            image.style.width = "500px";
+            aTag.appendChild(image);
+            div.appendChild(aTag)
+    
+            mainSection.appendChild(div);
 } } }
 
 
