@@ -1,14 +1,14 @@
 import { getCarData } from "./car-data.js";
 
 
-export const filteredCar = (searchedCarBrand) => {
-
+export const filteredCar = (searchedCarType) => {
     const data = getCarData();
     const filteredData = data.filter((carObj) => {
         //console.log(carObj.strCarBrand)
         const carName = carObj.strCarBrand.toLowerCase();
-        //console.log(carName, 'line16')
-        return carName.includes(searchedCarBrand);
+        const carPrice = carObj.numCarPriceUSD.toString()
+        const carYear = carObj.strCarYear;
+        return carName.includes(searchedCarType) ||  carYear.includes(searchedCarType) || carPrice.includes(searchedCarType)
         
     } )
     //console.log(typeof filteredData, 'line19')

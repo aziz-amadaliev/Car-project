@@ -32,6 +32,14 @@ input[type=text], input[type=number], select{
     padding: 5px;
 }
 
+/* select{
+    appearance: none;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+}
+ */
+
+
 input.volumeA, input.volumeB, input.yearA, input.yearB {
     width: 50px;
 }
