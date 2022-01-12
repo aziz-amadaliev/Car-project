@@ -5,6 +5,8 @@ import { pushToHtmlYear1 } from "./helpers.js";
 import { pushToHTML1 } from "./helpers.js";
 import { pushToHtmlB } from "./helpers.js";
 import { pushToHtmlA } from "./helpers.js";
+
+const mainSection = document.querySelector(".main-section");
 const brand = document.querySelector(".brand");
 const button = document.querySelector(".btn-search");
 const priceB = document.querySelector(".priceB");
@@ -13,6 +15,9 @@ const yearB = document.querySelector(".yearB");
 const yearA = document.querySelector(".yearA");
 
 const processClick = (event) => {
+    while (mainSection.firstChild) {
+        mainSection.removeChild(mainSection.firstChild); //to remove child elements when search button clicked
+    }
     event.preventDefault()
 
         if (brand.value != "" && priceB.value == "" && priceA.value == "" && yearB.value == "" && yearA.value == ""){
