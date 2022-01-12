@@ -1,6 +1,24 @@
+import { getCarData } from "./car-data.js";
+import { data } from "./main.js";
+//import { processClick } from "./main.js";
+
+const mainSection = document.querySelector(".main-section");
+
+export const filteredCar = (searchedCarBrand) => {
+
+   // const data = getCarData();
+    const filteredData = data.filter((carObj) => {
+        //console.log(carObj.strCarBrand)
+        const carName = carObj.strCarBrand.toLowerCase();
+        //console.log(carName, 'line16')
+        return carName.includes(searchedCarBrand);
+        
+    } )
+    //console.log(typeof filteredData, 'line19')
 //Gearbox
 const gearbox = document.querySelector("#gearbox");
 gearbox.addEventListener('change', showFilteredCarGearbox)
+
 
 function showFilteredCarGearbox (event){
     while (mainSection.firstChild) {
@@ -36,4 +54,4 @@ function showFilteredCarGearbox (event){
             mainSection.appendChild(div); 
         }
     });   
-}
+}}

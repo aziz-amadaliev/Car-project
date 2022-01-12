@@ -1,7 +1,7 @@
 import {getCarData} from "./car-data.js";
 import {filteredCar} from "./helpers.js";
 
-const data = getCarData();
+export const data = getCarData();
 
 const mainSection = document.querySelector(".main-section");
 const carSection = document.querySelector(".car-section");
