@@ -9,7 +9,7 @@ const yearA = document.querySelector(".yearA");
 const volumeB = document.querySelector(".volumeB")
 const volumeA = document.querySelector(".volumeA")
 
-export const filteredCar = (searchedCarType) => {
+const filteredCar = (searchedCarType) => {
     const data = getCarData();
     const filteredData = data.filter((carObj) => {
         const carName = carObj.strCarBrand.toLowerCase();
@@ -20,7 +20,6 @@ export const filteredCar = (searchedCarType) => {
     return filteredData;
 }
 
-//VENERA`S PART 
 //Body
 const body = document.querySelector("#body")
 
@@ -174,7 +173,7 @@ function showFilteredCarGearbox (event){
 }
 
 
-/*--------- Nursultan ------------ */
+/*--------- Brand, Price, Year, Volume ------------ */
 
 function pushToHtmlPrice () {
     const searchedCarValue = brand.value.toLowerCase();

@@ -47,42 +47,6 @@ const loadPage = window.addEventListener('load', (event) => {
 
 });
 
-/* const processClick = (event) => {
-    event.preventDefault()
-
-    while (mainSection.firstChild) {
-        mainSection.removeChild(mainSection.firstChild); //to remove child elements when search button clicked
-    }
-
-    const searchedCarBrand = brand.value.toLowerCase();
-
-    const filteredCarByBrand = filteredCar(searchedCarBrand);
-
-    for (let i=0; i < filteredCarByBrand.length; i++) {
-        const div = document.createElement("div")
-        div.classList.add("myDiv")
-
-        const paragraph = document.createElement("p");
-        paragraph.innerText = filteredCarByBrand[i].strCarBrand;
-        paragraph.classList.add("car-text")
-        div.appendChild(paragraph);
-
-        const image = document.createElement("img");
-        const aTag = document.createElement("a")
-        aTag.href = "./car.html";
-        aTag.target = "_blank";
-
-        image.src = filteredCarByBrand[i].strCarImage;
-        image.classList.add("car-image")
-        image.style.width = "500px";
-        aTag.appendChild(image);
-        div.appendChild(aTag)
-
-        mainSection.appendChild(div);
-       
-    }
-
-} */
 
 const processClick = (event) => {
     while (mainSection.firstChild) {
