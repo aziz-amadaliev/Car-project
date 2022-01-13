@@ -45,13 +45,29 @@ const loadPage = window.addEventListener('load', (event) => {
 
         const paragraph = document.createElement("div");
         paragraph.innerText = data[i].strCarBrand;
+        article.classList.add("myDiv1")
         article.appendChild(paragraph);
+
+        const paragraph3 = document.createElement("div");
+        paragraph3.innerText = data[i].strCarModel;
+        article.classList.add("myDiv1")
+        article.appendChild(paragraph3);
+
+        const paragraph4 = document.createElement("div");
+        paragraph4.innerText = data[i].strCarYear;
+        article.classList.add("myDiv1")
+        article.appendChild(paragraph4);
+        
+        const paragraph5 = document.createElement("div" + 'hello');
+        paragraph5.innerText = data[i].numCarVolum;
+        article.classList.add("myDiv1")
+        article.appendChild(paragraph5);
+
 
         const paragraph2 = document.createElement("div");
         paragraph2.innerHTML = data[i].numCarPriceUSD;
+        article.classList.add("myDiv1")
         article.appendChild(paragraph2);
-
-
     }
 });
 

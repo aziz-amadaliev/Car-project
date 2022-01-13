@@ -22,7 +22,7 @@ body{
     box-sizing: border-box;
     background-position: center;
     background-repeat: no-repeat;
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 
 input[type=text], input[type=number], select{
@@ -93,8 +93,17 @@ img:hover{
 
 .myDiv {
     display: flex;
+    margin-left: 20px;
 }
 
 .article{
     display: flex;
+    margin-left: 10px;
+    
+}
+
+.myDiv1 {
+    margin-left: 30px;
+    font-size: 30px;
+    color: rgb(24, 178, 230);
 }
