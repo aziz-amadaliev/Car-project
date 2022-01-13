@@ -29,10 +29,6 @@ const loadPage = window.addEventListener('load', (event) => {
         const div = document.createElement("div")
         div.classList.add("myDiv")
 
-        const paragraph = document.createElement("p");
-        paragraph.innerText = data[i].strCarBrand;
-        div.appendChild(paragraph);
-
         const aTag = document.createElement("a")
         aTag.href = "./car.html";
         aTag.target = "_blank";
@@ -42,6 +38,20 @@ const loadPage = window.addEventListener('load', (event) => {
         aTag.appendChild(image);
         div.appendChild(aTag);
         carSection.appendChild(div);
+
+        const article = document.createElement("div")
+        div.classList.add("article")
+        div.appendChild(article)
+
+        const paragraph = document.createElement("div");
+        paragraph.innerText = data[i].strCarBrand;
+        article.appendChild(paragraph);
+
+        const paragraph2 = document.createElement("div");
+        paragraph2.innerHTML = data[i].numCarPriceUSD;
+        article.appendChild(paragraph2);
+
+
     }
 });
 

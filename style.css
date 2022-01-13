@@ -90,3 +90,11 @@ img:hover{
     color: red;
     z-index: 100;
 }
+
+.myDiv {
+    display: flex;
+}
+
+.article{
+    display: flex;
+}
