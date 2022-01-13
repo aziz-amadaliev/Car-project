@@ -44,7 +44,7 @@ function showFilteredCarBody (event){
             div.appendChild(paragraph);
 
             const image = document.createElement("img");
-            const aTag = document.createElement("a")
+            const aTag = document.createElement("a");
             aTag.href = "./car.html";
             aTag.target = "_blank";
 
