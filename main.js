@@ -1,5 +1,4 @@
 import {getCarData} from "./car-data.js";
-import {filteredCar} from "./helpers.js";
 import { pushToHtmlPrice } from "./helpers.js";
 import { pushToHtmlBrand } from "./helpers.js";
 import { pushToHtmlYear } from "./helpers.js";
@@ -44,9 +43,7 @@ const loadPage = window.addEventListener('load', (event) => {
         div.appendChild(aTag);
         carSection.appendChild(div);
     }
-
 });
-
 
 const processClick = (event) => {
     while (mainSection.firstChild) {
