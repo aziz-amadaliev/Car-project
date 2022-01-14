@@ -113,3 +113,17 @@ img:hover{
     border: none;
     border-radius: 5px;
 }
+
+@media screen and (max-width: 900px) {
+    .grid{
+        display: grid;
+        grid-template-columns: 1fr;
+        align-items: center;
+        justify-content: center;
+    }
+
+    img{
+        width: 500px;
+        height: 250px;
+    }
+}
