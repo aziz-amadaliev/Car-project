@@ -63,15 +63,10 @@ select {
     justify-content: space-evenly;
 }
 
-p {
-    color: rgb(24, 178, 230);
-    font-size: 1.5rem;
-    font-weight: bold;
-}
-
 img{
     border: 5px solid whitesmoke;
     border-radius: 7px;
+    margin: 10px;
 }
 
 img:hover{
@@ -91,19 +86,30 @@ img:hover{
     z-index: 100;
 }
 
-.myDiv {
-    display: flex;
-    margin-left: 20px;
-}
 
-.article{
+.myDiv{
     display: flex;
     margin-left: 10px;
-    
+    margin-top: 15px;
+    font-size: 16px;
+    color: black;
 }
 
-.myDiv1 {
-    margin-left: 30px;
-    font-size: 30px;
-    color: rgb(24, 178, 230);
+.article2{
+    margin-top: 10px;
+}
+
+.parDiv{
+    display: flex;
+    padding: 5px;
+}
+
+.button-loan{
+    background-color: rgb(24, 178, 230);
+    color: whitesmoke;
+    text-decoration: none;
+    padding: 5px;
+    margin: 30px 5px;
+    border: none;
+    border-radius: 5px;
 }

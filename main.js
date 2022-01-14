@@ -26,48 +26,99 @@ export const data = getCarData();
 
 const loadPage = window.addEventListener('load', (event) => {
     for (let i=0; i < data.length; i++) {
-        const div = document.createElement("div")
-        div.classList.add("myDiv")
+        const myDiv = document.createElement("div");
+        myDiv.classList.add("myDiv");
+        carSection.appendChild(myDiv);
 
-        const aTag = document.createElement("a")
+        const aTag = document.createElement("a");
         aTag.href = "./car.html";
         aTag.target = "_blank";
+        myDiv.appendChild(aTag);
         const image = document.createElement("img");
         image.src = data[i].strCarImage;
-        image.style.width = "400px";
+        image.style.width = "300px";
         aTag.appendChild(image);
-        div.appendChild(aTag);
-        carSection.appendChild(div);
+        
+        const article = document.createElement("div");
+        article.classList.add("article2");
+        myDiv.appendChild(article);
 
-        const article = document.createElement("div")
-        div.classList.add("article")
-        div.appendChild(article)
+        //carBrand
+        const parDiv = document.createElement("div");
+        parDiv.classList.add("parDiv");
+        article.appendChild(parDiv);
+
+        const paragraphDesc = document.createElement("div");
+        paragraphDesc.innerText = "Brand:  ";
+        paragraphDesc.classList.add("paragraphDesc");
+        parDiv.appendChild(paragraphDesc);
 
         const paragraph = document.createElement("div");
         paragraph.innerText = data[i].strCarBrand;
-        article.classList.add("myDiv1")
-        article.appendChild(paragraph);
+        paragraph.classList.add("parDiv2");
+        parDiv.appendChild(paragraph);
 
-        const paragraph3 = document.createElement("div");
-        paragraph3.innerText = data[i].strCarModel;
-        article.classList.add("myDiv1")
-        article.appendChild(paragraph3);
 
-        const paragraph4 = document.createElement("div");
-        paragraph4.innerText = data[i].strCarYear;
-        article.classList.add("myDiv1")
-        article.appendChild(paragraph4);
-        
-        const paragraph5 = document.createElement("div" + 'hello');
-        paragraph5.innerText = data[i].numCarVolum;
-        article.classList.add("myDiv1")
-        article.appendChild(paragraph5);
+        //carModel
+        const parDiv2 = document.createElement("div");
+        parDiv2.classList.add("parDiv");
+        article.appendChild(parDiv2);
 
+        const paragraph2Desc = document.createElement("div")
+        paragraph2Desc.innerText = "Model:  ";
+        paragraph2Desc.classList.add("paragraphDesc");
+        parDiv2.appendChild(paragraph2Desc);
 
         const paragraph2 = document.createElement("div");
-        paragraph2.innerHTML = data[i].numCarPriceUSD;
-        article.classList.add("myDiv1")
-        article.appendChild(paragraph2);
+        paragraph2.innerText = data[i].strCarModel;
+        paragraph2.classList.add("parDiv2");
+        parDiv2.appendChild(paragraph2);
+
+        //carYear
+        const parDiv3 = document.createElement("div");
+        parDiv3.classList.add("parDiv");
+        article.appendChild(parDiv3);
+
+        const paragraph3Desc = document.createElement("div")
+        paragraph3Desc.innerText = "Year:  ";
+        paragraph3Desc.classList.add("paragraphDesc");
+        parDiv3.appendChild(paragraph3Desc);
+
+        const paragraph3 = document.createElement("div");
+        paragraph3.innerText = data[i].strCarYear;
+        article.classList.add("parDiv2");
+        parDiv3.appendChild(paragraph3);
+
+        //carVolum
+        const parDiv4 = document.createElement("div");
+        parDiv4.classList.add("parDiv");
+        article.appendChild(parDiv4);
+
+        const paragraph4Desc = document.createElement("div");
+        paragraph4Desc.innerText = "Volume, m3:  ";
+        paragraph4Desc.classList.add("paragraphDesc");
+        parDiv4.appendChild(paragraph4Desc);
+
+        const paragraph4 = document.createElement("div");
+        paragraph4.innerText = data[i].numCarVolum;
+        article.classList.add("parDiv2");
+        parDiv4.appendChild(paragraph4);
+
+
+        //carPrice
+        const parDiv5 = document.createElement("div");
+        parDiv5.classList.add("parDiv");
+        article.appendChild(parDiv5);
+
+        const paragraph5Desc = document.createElement("div");
+        paragraph5Desc.innerText = "Price:  $ ";
+        paragraph5Desc.classList.add("paragraphDesc");
+        parDiv5.appendChild(paragraph5Desc);
+
+        const paragraph5 = document.createElement("div");
+        paragraph5.innerHTML = data[i].numCarPriceUSD;
+        article.classList.add("parDiv2");
+        parDiv5.appendChild(paragraph5);
     }
 });
 
